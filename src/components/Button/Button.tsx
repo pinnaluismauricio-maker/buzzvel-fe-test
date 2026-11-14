@@ -3,7 +3,7 @@ import type { ComponentProps } from "react";
 
 type ButtonProps = ComponentProps<typeof Link> & {
   variant?: "primary" | "outline" | "secondary";
-  size?: "md" | "lg";
+  size?: "md" | "lg" | "cta";
 };
 
 const variants = {
@@ -15,7 +15,10 @@ const variants = {
 const sizes = {
   md: "px-5 py-2.5",
   lg: "h-[52px] px-7 sm:h-[54px]",
+  cta: "h-[52px] px-7",
 };
+
+
 
 export default function Button({
   variant = "primary",
