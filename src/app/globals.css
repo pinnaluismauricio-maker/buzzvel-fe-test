@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
+/* ========================================
+   LUMA - DESIGN SYSTEM
+======================================== */
+
 :root {
+  /* Marca */
+  --primary: #3157f6;
+  --primary-light: #e2e8ff;
+  --secondary: #ffee7e;
+  --accent: #ff704d;
+  --gold: #e9d659;
+
+  /* Fundos */
   --background: #ffffff;
-  --foreground: #171717;
+  --background-cream: #f9f8f3;
+  --background-peach: #ffcb9f;
+  --background-sun: #fff1c2;
+  --background-navy: #171b2c;
+
+  /* Texto e neutras */
+  --foreground: #171b2c;
+  --muted: #656770;
+  --surface: #f7f8fc;
+  --border: #e5e8f0;
+
+  /* Tipografia */
+  --font-body: var(--font-inter);
+  --font-heading: var(--font-plus-jakarta-sans);
+
+  /* Layout */
+  --container-width: 1200px;
 }
+
+/* ========================================
+   TAILWIND THEME
+======================================== */
 
 @theme inline {
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-gold: var(--gold);
+
   --color-background: var(--background);
+  --color-cream: var(--background-cream);
+  --color-peach: var(--background-peach);
+  --color-sun: var(--background-sun);
+  --color-navy: var(--background-navy);
+
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ========================================
+   ESTILOS GLOBAIS
+======================================== */
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
+  min-height: 100%;
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* ========================================
+   ACESSIBILIDADE
+======================================== */
+
+:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
