@@ -8,9 +8,9 @@ import Logo from "@/components/Logo/Logo";
 
 const navigation = [
   { label: "Courses", href: "#courses" },
-  { label: "For Teams", href: "#for-teams" },
+  { label: "For Teams", href: "#contact" },
   { label: "Community", href: "#community" },
-  { label: "About", href: "#about" },
+  { label: "About", href: "#howitworks" },
 ];
 
 export default function Header() {
@@ -74,7 +74,7 @@ export default function Header() {
             Log in
           </a>
 
-          <Button href="#signup">Start learning</Button>
+          <Button href="#courses">Start learning</Button>
         </div>
 
         {/* Botão do menu mobile */}
@@ -114,14 +114,14 @@ export default function Header() {
 
             <div className="flex flex-col gap-4 border-t border-border pt-5">
               <a
-                href="#login"
+                href="#"
                 onClick={closeMenu}
                 className="font-semibold text-foreground"
               >
                 Log in
               </a>
 
-              <Button href="#signup" onClick={closeMenu} className="w-full">
+              <Button href="#courses" onClick={closeMenu} className="w-full">
                 Start learning
               </Button>
             </div>
