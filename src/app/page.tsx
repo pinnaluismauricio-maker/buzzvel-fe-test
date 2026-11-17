@@ -6,6 +6,8 @@ import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import Testimonial from "@/components/Testimonial/Testimonial";
 import Comunity from "@/components/Comunity/Comunity";
 import Contact from "@/components/Contact/Contact";
+import FinalCta from "@/components/FinalCta/FinalCta";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -19,7 +21,9 @@ export default function Home() {
         <Testimonial />
         <Comunity />
         <Contact />
+        <FinalCta />
       </main>
+      <Footer />
     </>
   );
 }
