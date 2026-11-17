@@ -21,7 +21,7 @@ export default function FeaturedCourse() {
     <section
       id="featured-course"
       aria-labelledby="featured-title"
-      className="bg-primary text-white"
+      className="bg-primary text-white [&_a:focus-visible]:outline-white"
     >
       <div className="mx-auto grid max-w-[1280px] items-center gap-10 px-5 py-[60px] lg:grid-cols-[1.03fr_1fr] lg:gap-[60px] lg:px-20 lg:py-[100px]">
         {/* Imagem */}

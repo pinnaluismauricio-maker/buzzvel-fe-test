@@ -1,6 +1,5 @@
-
-import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -13,24 +12,51 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const title = "Luma | Learn Without Limits";
+const description =
+  "Luma is an online learning platform with expert-led courses in design, technology, business and creative skills. Build skills that actually move you forward.";
+
 export const metadata: Metadata = {
-  title: "Luma | Learn Without Limits",
-  description:
-    "Discover new skills, learn from industry experts, and take your career to the next level with Luma.",
+  title: {
+    default: title,
+    template: "%s | Luma",
+  },
+  description,
+  applicationName: "Luma",
+  openGraph: {
+    title,
+    description,
+    siteName: "Luma",
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f9f8f3",
 };
 
 export default function RootLayout({
   children,
-}: LayoutProps<"/">) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
-    <html
-      lang="en"
-      className={`${plusJakartaSans.variable} ${inter.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="en" className={`${plusJakartaSans.variable} ${inter.variable}`}>
+      <body>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-bold focus:text-foreground focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>
   );
 }
-
