@@ -42,7 +42,7 @@ Lighthouse on the production build:
 | | Performance | Accessibility | Best Practices | SEO |
 |---|---|---|---|---|
 | Mobile | 87 | 100 | 96 | 100 |
-| Desktop | [add] | 100 | [add] | [add] |
+| Desktop | 98 | 100 | 100 | 100 |
 
 On mobile, the hero image is the LCP element and loads quickly. Most of the remaining time is CSS/font render delay and the Next.js runtime, so I chose not to risk the layout for a few extra points.
 
@@ -57,7 +57,7 @@ On mobile, the hero image is the LCP element and loads quickly. Most of the rema
 
 ## Time spent
 
-About **[X] hours** over [N] days.
+About **16 hours** over [4] days.
 
 ## AI tools
 
