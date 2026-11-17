@@ -5,6 +5,7 @@ import FeaturedCourse from "@/components/FeaturedCourse/FeaturedCourse";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import Testimonial from "@/components/Testimonial/Testimonial";
 import Comunity from "@/components/Comunity/Comunity";
+import Contact from "@/components/Contact/Contact";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <HowItWorks />
         <Testimonial />
         <Comunity />
+        <Contact />
       </main>
     </>
   );

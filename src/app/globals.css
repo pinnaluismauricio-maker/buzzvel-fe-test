@@ -11,6 +11,7 @@
   --secondary: #ffee7e;
   --accent: #ff704d;
   --gold: #e9d659;
+  --danger: #b42318;
 
   /* Fundos */
   --background: #ffffff;
@@ -43,7 +44,7 @@
   --color-secondary: var(--secondary);
   --color-accent: var(--accent);
   --color-gold: var(--gold);
-
+  
   --color-background: var(--background);
   --color-cream: var(--background-cream);
   --color-peach: var(--background-peach);
